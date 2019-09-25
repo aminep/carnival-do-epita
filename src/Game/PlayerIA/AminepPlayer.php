@@ -44,10 +44,10 @@ class AminepPlayer extends Player
           return parent::rockChoice();
         
         if ($this->result->getLastChoiceFor($this->opponentSide) == "paper")
-          return parent::scissorsChoice();
-        else if ($this->result->getLastChoiceFor($this->opponentSide) == "rock")
           return parent::paperChoice();
-        else if ($this->result->getLastChoiceFor($this->opponentSide) == "scissors")
+        else if ($this->result->getLastChoiceFor($this->opponentSide) == "rock")
           return parent::rockChoice();
+        else if ($this->result->getLastChoiceFor($this->opponentSide) == "scissors")
+          return parent::scissorsChoice();
   }
 };
