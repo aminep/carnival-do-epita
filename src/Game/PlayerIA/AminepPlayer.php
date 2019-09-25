@@ -40,15 +40,14 @@ class AminepPlayer extends Player
         // -------------------------------------    -----------------------------------------------------
         // How can i display the result of each round ? $this->prettyDisplay()
         // -------------------------------------    -----------------------------------------------------
-        // if (0 == $this->result->getLastChoiceFor($this->opponentSide))
-        //   return parent::rockChoice();
+        if (0 == $this->result->getLastChoiceFor($this->opponentSide))
+          return parent::rockChoice();
         
-        // if ($this->result->getLastChoiceFor($this->opponentSide) == parent::paperChoice())
-        //   return parent::scissorsChoice();
-        // else if ($this->result->getLastChoiceFor($this->opponentSide) == parent::scissorsChoice())
-        //   return parent::scissorsChoice();
-        // else if ($this->result->getLastChoiceFor($this->opponentSide) == parent::rockChoice())
-        //   return parent::paperChoice();
-        return parent::paperChoice();
+        if ($this->result->getLastChoiceFor($this->opponentSide) == parent::paperChoice())
+          return parent::scissorsChoice();
+        else if ($this->result->getLastChoiceFor($this->opponentSide) == parent::scissorsChoice())
+          return parent::scissorsChoice();
+        else if ($this->result->getLastChoiceFor($this->opponentSide) == parent::rockChoice())
+          return parent::paperChoice();
   }
 };
