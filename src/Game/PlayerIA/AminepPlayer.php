@@ -27,7 +27,7 @@ class AminepPlayer extends Player
         // How to get all the Choices          ?    $this->result->getChoicesFor($this->mySide)
         // How to get the opponent Last Choice ?    $this->result->getChoicesFor($this->opponentSide)
         // -------------------------------------    -----------------------------------------------------
-       // How to get my Last Score            ?    $this->result->getLastScoreFor($this->mySide)
+        // How to get my Last Score            ?    $this->result->getLastScoreFor($this->mySide)
         // How to get the opponent Last Score  ?    $this->result->getLastScoreFor($this->opponentSide)
         // -------------------------------------    -----------------------------------------------------
         // How to get the stats                ?    $this->result->getStats()
@@ -40,14 +40,15 @@ class AminepPlayer extends Player
         // -------------------------------------    -----------------------------------------------------
         // How can i display the result of each round ? $this->prettyDisplay()
         // -------------------------------------    -----------------------------------------------------
-        if (0 == $this->result->getLastChoiceFor($this->opponentSide))
-          return parent::rockChoice();
+        // if (0 == $this->result->getLastChoiceFor($this->opponentSide))
+        //   return parent::rockChoice();
         
-        if ($this->result->getLastChoiceFor($this->opponentSide) == "paper")
-          return parent::paperChoice();
-        else if ($this->result->getLastChoiceFor($this->opponentSide) == "rock")
-          return parent::rockChoice();
-        else if ($this->result->getLastChoiceFor($this->opponentSide) == "scissors")
-          return parent::scissorsChoice();
+        // if ($this->result->getLastChoiceFor($this->opponentSide) == parent::paperChoice())
+        //   return parent::scissorsChoice();
+        // else if ($this->result->getLastChoiceFor($this->opponentSide) == parent::scissorsChoice())
+        //   return parent::scissorsChoice();
+        // else if ($this->result->getLastChoiceFor($this->opponentSide) == parent::rockChoice())
+        //   return parent::paperChoice();
+        return parent::paperChoice();
   }
 };
